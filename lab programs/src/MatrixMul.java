@@ -1,11 +1,8 @@
-
 public class MatrixMul {
     public static void main(String[] args) {
-        // Define the matrices
         int[][] matrix1 = {{1, 2, 3}, {4, 5, 6}};
         int[][] matrix2 = {{7, 8}, {9, 10}, {11, 12}};
 
-        // Perform matrix multiplication
         int[][] result = multiplyMatrices(matrix1, matrix2);
 
         // Display the result
@@ -22,7 +19,7 @@ public class MatrixMul {
         for (int i = 0; i < rows1; i++) {
             for (int j = 0; j < cols2; j++) {
                 for (int k = 0; k < cols1; k++) {
-                    result[i][j] += matrix1[i][k] * matrix2[k][j];
+                    result[i][j] += matrix1[i][k] + matrix2[k][j];
                 }
             }
         }
@@ -38,3 +35,46 @@ public class MatrixMul {
         }
     }
 }
+/*
+
+import java.util.*;
+public class MatrixMul {
+	public static void main(String[] args) {
+		int[][] a=new int[3][3];		
+		int[][] b=new int[3][3];
+		int[][] c =new int[3][3];
+		Scanner sc =new Scanner(System.in);
+		System.out.println("enter the values of a:");
+		for(int i =0;i<3;i++)
+		{
+	    for(int j=0;j<3;j++)
+	    {
+		a[i][j]=sc.nextInt();
+	    }
+		}
+	System.out.println("enter the values of b:");
+	for(int i=0;i<3;i++)
+	{
+	for(int j=0;j<3;j++)
+	{
+		b[i][j]=sc.nextInt();
+	}
+	}
+	for(int i=0;i<3;i++)
+	{
+	for(int j=0;j<3;j++)
+	{
+		c[i][j] = a[i][j]*b[i][j];
+	}
+	}
+	for(int i=0;i<3;i++)
+	{
+		for (int j=0;j<3;j++)
+		{
+		System.out.print(c[i][j]+" ");
+		}
+		System.out.print("");
+	}
+	}
+	}
+*/
